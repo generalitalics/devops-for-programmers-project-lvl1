@@ -9,8 +9,6 @@ services:
   app: # Имя сервиса
     # image: devops-for-programmers-project-lvl1
     build:
-    #   # Контекст для сборки образа,
-    #   # в данном случае, текущая директория
       context: .
     #   # Имя Docker-файла из которого будет собран образ
       dockerfile: Dockerfile
@@ -24,3 +22,19 @@ services:
     volumes:
       # Текущая директория пробрасывается в директорию /app внутри контейнера
       - "./app:/app/"
+
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - app
+    volumes:
+      - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+#       - caddy_data:/data
+#       - caddy_config:/config
+# volumes:
+#   caddy_data:
+#   caddy_config:
