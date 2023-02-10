@@ -6,4 +6,5 @@
 
 [![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions)
 
-[![Docker CI](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)](https://githubcom/generalitalics/devops-for-programmers-project-lvl1/actions)
+### Push status:
+![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)
