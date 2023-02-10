@@ -3,10 +3,9 @@ name: push
 on: push
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
 
-      - name: test
-        run: make test
+    - name: test
+      run: make ci

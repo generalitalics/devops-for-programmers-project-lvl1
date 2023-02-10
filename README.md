@@ -4,6 +4,7 @@
 
 Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
 
+### Hexlet Check status:
 [![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions)
 
 ### Push status:
