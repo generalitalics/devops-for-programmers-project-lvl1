@@ -1,16 +1,12 @@
 name: push
 
-on:
-  push:
-    branches:
-      - '**'
-    tags:
-      - '**'
+on: push
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-    - name: test
-      run: make test
+      - name: test
+        run: make test
