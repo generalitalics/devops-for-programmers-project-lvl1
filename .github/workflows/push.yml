@@ -1,5 +1,5 @@
 # file: .github/workflows/hello-world.yml
-name: generalitalics-check
+name: push
 # on – определяет события, которые запускают воркфлоу (пуш, релиз или пул-реквест)
 on: push
 jobs:
