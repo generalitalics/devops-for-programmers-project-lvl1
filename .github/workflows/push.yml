@@ -1,11 +1,6 @@
 name: push
 
-on:
-  push:
-    branches:
-      - '**'
-    tags:
-      - '**'
+on: push
 
 jobs:
   ci:
