@@ -12,6 +12,9 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      DATABASE_NAME: postgres
+      DATABASE_PORT: 5432
+      DATABASE_HOST: db
 
   app: # Имя сервиса
     image: generalitalics/devops-for-programmers-project-lvl1:latest
