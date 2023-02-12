@@ -6,13 +6,6 @@ version: "3"
 # Эти сервисы будут частью нашего приложения
 services:
 
-  db:
-    image: postgres:latest
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-
   app: # Имя сервиса
     image: generalitalics/devops-for-programmers-project-lvl1:latest
     build:
@@ -30,3 +23,10 @@ services:
     # # Например, все что находится в . мы увидим в директории /app
     depends_on:
       - db
+
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
