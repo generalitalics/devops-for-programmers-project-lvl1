@@ -8,7 +8,7 @@
 ### Push status:
 ![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)
 
-### Docker version:
+### Docker:
 [![Docker](https://img.shields.io/docker/pulls/generalitalics/devops-for-programmers-project-lvl1.svg?label=Docker%20Image&style=flat)](https://hub.docker.com/repository/docker/generalitalics/devops-for-programmers-project-lvl1)
 
 Parts:
