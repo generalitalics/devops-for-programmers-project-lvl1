@@ -1,11 +1,17 @@
-# Автоматические тесты
-
-После завершения всех шагов в проекте, вам станут доступны автоматические тесты. Тесты запускаются на каждый коммит - после завершения всех заданий в интерфейсе Хекслета, сделайте коммит, и тесты заработают автоматически.
-
-Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
+# Devops for programmers
+#### 1 practise case
+#### Project of packing app (test and prod) in JS with PG and revers-proxy modules in Docker Image within docker-compose and sending pass result to Docker Hub
 
 ### Hexlet Check status:
 [![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions)
 
 ### Push status:
 ![Actions Status](https://github.com/generalitalics/devops-for-programmers-project-lvl1/actions/workflows/push.yml/badge.svg)
+
+### Docker version:
+[![Docker](https://img.shields.io/docker/pulls/generalitalics/devops-for-programmers-project-lvl1.svg?label=Docker%20Image&style=flat)](https://hub.docker.com/repository/docker/generalitalics/devops-for-programmers-project-lvl1)
+
+Parts:
+- web-site in fastify framework
+- caddy (reverse-proxy)
+- postgres:latest
