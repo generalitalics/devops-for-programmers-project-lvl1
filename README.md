@@ -1,5 +1,5 @@
 # Devops for programmers
-#### 1 practise case
+#### 1st practise case
 #### Project of packing app (test and prod) in JS with PG and revers-proxy modules in Docker Image within docker-compose and sending pass result to Docker Hub
 
 ### Hexlet Check status:
