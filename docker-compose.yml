@@ -5,7 +5,10 @@ version: "3"
 # Определяем список сервисов — services
 # Эти сервисы будут частью нашего приложения
 services:
-
+  values:
+    volumes:
+      - ./app/.env.example:.env
+      
   db:
     image: postgres:latest
     restart: always
@@ -26,6 +29,8 @@ services:
       dockerfile: Dockerfile.production
     #   # Команда, которая будет выполнена после старта сервиса
     command: bash -c 'sleep 3 && npm test'
+    volumes:
+      - ./app/.env.example:.env
     # ports: # Проброс портов
     #   - "3000:8000"
     environment:
