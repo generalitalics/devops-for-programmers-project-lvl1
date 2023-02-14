@@ -10,9 +10,9 @@ services:
     image: postgres:latest
     restart: always
     volumes:
-      - ./app/.env.example:.env
+      - ./app/.env.example:./.env
     env_file:
-     - .env
+     - ./.env
     environment:
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_NAME: ${DATABASE_NAME}
@@ -31,9 +31,9 @@ services:
     #   # Команда, которая будет выполнена после старта сервиса
     command: bash -c 'sleep 3 && npm test'
     volumes:
-      - ./app/.env.example:.env
+      - ./app/.env.example:./.env
     env_file:
-      - .env
+      - ./.env
 
     # ports: # Проброс портов
     #   - "3000:8000"
