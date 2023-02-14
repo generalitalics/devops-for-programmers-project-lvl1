@@ -10,7 +10,7 @@ services:
     image: postgres:latest
     restart: always
     volumes:
-      - ./app/.env.example:./.env
+      - ./app/.env.example:.env
     env_file:
      - ./.env
     environment:
@@ -31,7 +31,7 @@ services:
     #   # Команда, которая будет выполнена после старта сервиса
     command: bash -c 'sleep 3 && npm test'
     volumes:
-      - ./app/.env.example:./.env
+      - ./app/.env.example:.env
     env_file:
       - ./.env
 
