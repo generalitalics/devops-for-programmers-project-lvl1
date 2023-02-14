@@ -25,7 +25,7 @@ services:
     #   # Имя Docker-файла из которого будет собран образ
       dockerfile: Dockerfile.production
     #   # Команда, которая будет выполнена после старта сервиса
-    command: npm test
+    command: bash -c 'sleep 3 && npm test'
     # ports: # Проброс портов
     #   - "3000:8000"
     environment:
