@@ -34,11 +34,9 @@ services:
     # ports: # Проброс портов
     #   - "3000:8000"
     environment:
-      DATABASE_HOST: ${DATABASE_HOST}
-      DATABASE_NAME: ${DATABASE_NAME}
-      DATABASE_USERNAME: ${DATABASE_USERNAME}
-      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-      DATABASE_PORT: ${DATABASE_PORT}
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     # # Перечисляем тома (volumes)
     # # Они будут подключены к файловой системе сервиса
     # # Например, все что находится в . мы увидим в директории /app
