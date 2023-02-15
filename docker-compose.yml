@@ -28,8 +28,6 @@ services:
       dockerfile: Dockerfile.production
     #   # Команда, которая будет выполнена после старта сервиса
     command: bash -c 'sleep 3 && npm test'
-    volumes:
-      - "/app/.env.example:/app/.env"
     # env_file:
     #   - ./app/.env.example
 
