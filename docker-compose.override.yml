@@ -1,26 +1,15 @@
-# Версия схемы, которую мы используем.
-# Зависит от установленной версии docker
-# https://docs.docker.com/compose/compose-file/
 version: "3"
-# Определяем список сервисов — services
-# Эти сервисы будут частью нашего приложения
+
 services:
 
-  app: # Имя сервиса
-    # image: devops-for-programmers-project-lvl1
+  app:
     build:
       context: .
-    #   # Имя Docker-файла из которого будет собран образ
       dockerfile: Dockerfile
-    #   # Команда, которая будет выполнена после старта сервиса
     command: "bash -c 'sleep 3 && npm start'"
-    ports: # Проброс портов
+    ports:
       - "8080:8080"
-    # # Перечисляем тома (volumes)
-    # # Они будут подключены к файловой системе сервиса
-    # # Например, все что находится в . мы увидим в директории /app
     volumes:
-      # Текущая директория пробрасывается в директорию /app внутри контейнера
       - ./app:/app
 
   caddy:
@@ -33,8 +22,3 @@ services:
       - app
     volumes:
       - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
-#       - caddy_data:/data
-#       - caddy_config:/config
-# volumes:
-#   caddy_data:
-#   caddy_config:

@@ -15,3 +15,12 @@ Parts:
 - web-site in fastify framework
 - caddy (reverse-proxy)
 - postgres:latest
+
+Сommands in ___Makefile___:
+
+- `make cp-env` - copy environment app/.env.example to .env
+- `make ci` - run tests with image Dockerfile.production
+- `make build-test` - build production image 
+- `make push-test` - push to Docker Hub: _generalitalics/devops-for-programmers-project-lvl1:latest_
+- `make build` - build test and production images
+- `make run` - launch test and production images

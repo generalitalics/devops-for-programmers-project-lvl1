@@ -1,44 +1,26 @@
-# Версия схемы, которую мы используем.
-# Зависит от установленной версии docker
-# https://docs.docker.com/compose/compose-file/
 version: "3"
-# Определяем список сервисов — services
-# Эти сервисы будут частью нашего приложения
+
 services:
 
   db:
     image: postgres:latest
     restart: always
-    # volumes:
-    #   - "/app/.env.example:/app/.env"
     environment:
       POSTGRES_DB: ${DATABASE_NAME}
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       
-  app: # Имя сервиса
+  app:
     image: generalitalics/devops-for-programmers-project-lvl1:latest
     build:
-    #   # Контекст для сборки образа,
-    #   # в данном случае, текущая директория
       context: .
-    #   # Имя Docker-файла из которого будет собран образ
       dockerfile: Dockerfile.production
-    #   # Команда, которая будет выполнена после старта сервиса
     command: bash -c 'sleep 3 && npm test'
-    # env_file:
-    #   - ./app/.env.example
-
-    # ports: # Проброс портов
-    #   - "3000:8000"
     environment:
       DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: ${DATABASE_PORT}
-    # # Перечисляем тома (volumes)
-    # # Они будут подключены к файловой системе сервиса
-    # # Например, все что находится в . мы увидим в директории /app
     depends_on:
       - db
